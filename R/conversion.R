@@ -10,17 +10,12 @@ pagedown::chrome_print(input = input)
 pdf_gif <- function(input,
                     output = paste0(gsub('pdf$', '', input), "gif"),
                     density = 100,
-                    delay = NULL
+                    delay = .5
                     ){
 
 # then create gif as follows
 images <- magick::image_read_pdf(path = input, density = density) # create images
 
-if (is.null(delay)) {
-
-delay <- (1/(1:length(images))) + .1
-
-}
 
 magick::image_write_gif(images, path = output, delay = delay) # images to gif
 
@@ -32,16 +27,16 @@ magick::image_write_gif(images, path = output, delay = delay) # images to gif
 #' @param input name of the html slides file
 #' @param output name of the gif
 #' @param density resolution maybe
-#' @param delay speed of frames
+#' @param delay time frame is displayed in seconds
 #'
-#' @return
+#' @return a pdf and a gif
 #' @export
 #'
 #' @examples
 slides_gif <- function(input,
            output = paste0(gsub('html$', '', input), "gif"),
            density = 100,
-           delay = NULL){
+           delay = .5){
 
 
 pdf <- slides_pdf(input = input)

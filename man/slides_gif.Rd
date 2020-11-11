@@ -5,7 +5,7 @@
 \title{Title}
 \usage{
 slides_gif(input, output = paste0(gsub("html$", "", input), "gif"),
-  density = 100, delay = NULL)
+  density = 100, delay = 0.5)
 }
 \arguments{
 \item{input}{name of the html slides file}
@@ -14,7 +14,10 @@ slides_gif(input, output = paste0(gsub("html$", "", input), "gif"),
 
 \item{density}{resolution maybe}
 
-\item{delay}{speed of frames}
+\item{delay}{time frame is displayed in seconds}
+}
+\value{
+a pdf and a gif
 }
 \description{
 Title
