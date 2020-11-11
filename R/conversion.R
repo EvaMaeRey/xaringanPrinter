@@ -9,7 +9,7 @@ pagedown::chrome_print(input = input)
 
 pdf_gif <- function(input,
                     output = paste0(gsub('pdf$', '', input), "gif"),
-                    density = 100,
+                    density = 200,
                     delay = .5
                     ){
 
@@ -35,7 +35,7 @@ magick::image_write_gif(images, path = output, delay = delay) # images to gif
 #' @examples
 slides_gif <- function(input,
            output = paste0(gsub('html$', '', input), "gif"),
-           density = 100,
+           density = 200,
            delay = .5){
 
 
