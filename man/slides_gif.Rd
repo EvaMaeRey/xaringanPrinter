@@ -5,7 +5,7 @@
 \title{Title}
 \usage{
 slides_gif(input, output = paste0(gsub("html$", "", input), "gif"),
-  density = 100, delay = 0.5)
+  density = 200, delay = 0.5)
 }
 \arguments{
 \item{input}{name of the html slides file}
@@ -21,4 +21,7 @@ a pdf and a gif
 }
 \description{
 Title
+}
+\examples{
+
 }
