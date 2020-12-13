@@ -20,7 +20,9 @@ pdf_gif <- function(input,
                     ){
 
 # then create gif as follows
-images <- magick::image_read_pdf(path = input, density = density) # create images
+images <- magick::image_read_pdf(path = input, density = density) %>% # create images
+        magick::image_contrast() %>%
+  magick::image_modulate(logo, saturation = 125)
 
 
 magick::image_write_gif(images, path = output, delay = delay) # images to gif
