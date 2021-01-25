@@ -3,15 +3,9 @@
 
 slides_pdf <- function(input){
 
-  for (i in 1:length(input)){
-pagedown::chrome_print(input = input[i])
-  }
-
-  pdftools::pdf_combine(input = stringr::str_replace(input, ".html", ".pdf"),
-                        output = "slides_combined.pdf")
+pagedown::chrome_print(input = input)
 
 }
-
 
 pdf_gif <- function(input,
                     output = paste0(gsub('pdf$', '', input), "gif"),
@@ -20,9 +14,7 @@ pdf_gif <- function(input,
                     ){
 
 # then create gif as follows
-images <- magick::image_read_pdf(path = input, density = density) %>% # create images
-        magick::image_contrast() %>%
-        magick::image_modulate(saturation = 125)
+images <- magick::image_read_pdf(path = input, density = density) # create images
 
 
 magick::image_write_gif(images, path = output, delay = delay) # images to gif
@@ -57,22 +49,21 @@ pdf_video <- function(input,
 #' @export
 #'
 #' @examples
-#'
 slides_gif <- function(input,
            output = paste0(gsub('html$', '', input), "gif"),
            density = 200,
            delay = .5){
 
-slides_pdf(input = input)
 
-pdf_gif(input = "slides_combined.pdf",
+pdf <- slides_pdf(input = input)
+
+pdf_gif(input = pdf,
         output = output,
         density = density,
         delay = delay)
 
+
 }
-
-
 
 
 slides_video <- function(input,

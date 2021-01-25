@@ -18,6 +18,5 @@ Encoding: UTF-8
 LazyData: true
 Imports: 
     magick,
-    pagedown,
-    magrittr
+    pagedown
 RoxygenNote: 6.1.1
