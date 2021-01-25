@@ -2,7 +2,7 @@ Package: xaringanPrinter
 Title: Converts remark.js html Slideshows to pdf, gif
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Brian",
+    person(given = "Bryan",
            family = "Shallowway",
            role = c("aut", "cre"),
            email = "first.last@example.com",
@@ -20,4 +20,7 @@ Imports:
     magick,
     pagedown,
     magrittr
+Suggests:
+    officer,
+    fs
 RoxygenNote: 6.1.1
