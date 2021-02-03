@@ -109,7 +109,7 @@ slides_pptx <- function(input){
   screen_imgs <- pdftools::pdf_convert(pdf = filepath_pdf, format = "png", verbose = FALSE)
 
   doc <- officer::read_pptx()
-  for (i in 1:length(input)) {
+  for (i in 1:length(screen_imgs)) {
     doc <- doc %>%
       officer::add_slide(layout = "Blank", master = "Office Theme") %>%
       officer::ph_with(
