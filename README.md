@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-superseded](https://img.shields.io/badge/lifecycle-superseded-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#superseded)
+deprecated](https://img.shields.io/badge/lifecycle-deprecated-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#deprecated)
 <!-- badges: end -->
 
 The goal of xaringanPrinter is to provide an easy interface to convert
@@ -45,7 +45,7 @@ slides_gif(input = "my_slideshow.html", output = "a_folder/my_slideshow.gif")
 
 This will produce “my\_slideshow.gif” in “a\_folder”.
 
-# Superseded
+# Deprecated
 
 This package is no longer being developed. Current work regarding
 outputting `{xaringan}` slides into different formats has coalesced
