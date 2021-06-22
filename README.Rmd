@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # xaringanPrinter
 
 <!-- badges: start -->
+[![Lifecycle: superseded](https://img.shields.io/badge/lifecycle-superseded-blue.svg)](https://lifecycle.r-lib.org/articles/stages.html#superseded)
 <!-- badges: end -->
 
 The goal of xaringanPrinter is to provide an easy interface to convert xaringan (remark.js) slides to other formats.
@@ -38,7 +39,7 @@ remotes::install_github("EvaMaeRey/xaringanPrinter")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
+```{r example, eval = FALSE}
 library(xaringanPrinter)
 ## basic example code
 ```
@@ -50,3 +51,6 @@ slides_gif(input = "my_slideshow.html", output = "a_folder/my_slideshow.gif")
 
 This will produce "my_slideshow.gif" in "a_folder".
 
+# Superseded
+
+This package is no longer being developed. Current work regarding outputting `{xaringan}` slides into different formats has coalesced around [Jhelvy/xaringanBuilder](https://github.com/jhelvy/xaringanBuilder).
